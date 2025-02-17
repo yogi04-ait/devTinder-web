@@ -3,13 +3,13 @@ import React, { useEffect } from "react";
 import { BASE_URL } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addFeed } from "../utils/feedSlice";
-import UserCard from "./userCard";
+import UserCard from "./UserCard";
 import { useNavigate } from "react-router-dom";
 
 const Feed = () => {
   const dispatch = useDispatch();
   const feed = useSelector((store) => store.feed);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const user = useSelector((store) => store.user);
   const getFeed = async () => {
     if (feed) return;
@@ -27,7 +27,7 @@ const Feed = () => {
     getFeed();
   }, []);
 
-  if(!user) navigate("/login")
+  if (!user) navigate("/login");
 
   if (!feed) return;
 
