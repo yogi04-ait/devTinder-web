@@ -24,7 +24,7 @@ const Connections = () => {
 
   if (connections.length == 0) return <h1>No connections found</h1>;
   return (
-    <div className="text-center my-10 w-full">
+    <div className="text-center my-10 w-full ">
       <h1 className="text-bold text-3xl text-white">Connections</h1>
       {connections.map((connection) => {
         const {_id, firstName, lastName, photoUrl, age, gender, about } =
